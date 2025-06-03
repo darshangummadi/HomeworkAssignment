@@ -87,8 +87,8 @@ Below is a brief explanation of the main files and their roles:
 ### Prerequisites
 - **Java 8:**  
   Ensure that Java 8 is installed on your machine.  
-- **Maven or Gradle:**  
-  This project uses Maven or Gradle for dependency management and build configuration. Make sure one of these tools is installed and properly configured.
+- **Maven:**  
+  This project uses Maven for dependency management and build configuration. Make sure one of these tools is installed and properly configured.
 - **Spring Boot Dependencies:**  
   All necessary Spring Boot dependencies are listed in your `pom.xml` or `build.gradle` file.
 
@@ -98,20 +98,11 @@ Below is a brief explanation of the main files and their roles:
    ```bash
    mvn clean install
    ```
-2. **Using Gradle:**  
-   Open a terminal, navigate to your project directory, and run:
-   ```bash
-   gradle build
-   ```
 
 ### Running the Application
 After a successful build, you can run the application using the following command:
 ```bash
 mvn spring-boot:run
-```
-Or if you have a Gradle setup:
-```bash
-gradle bootRun
 ```
 The application will start and listen on the default port (usually 8080). You can access the rewards endpoint at:
 ```
@@ -127,10 +118,6 @@ To run the tests, use the following commands:
 - **With Maven:**
   ```bash
   mvn test
-  ```
-- **With Gradle:**
-  ```bash
-  gradle test
   ```
 The tests cover:
 - **Context Loading:** Ensuring that Spring Boot initializes correctly.
