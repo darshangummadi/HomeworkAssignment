@@ -104,5 +104,3 @@ com.homeworkassignment
 ```
 
 ---
-
-Let me know if you want to include a link to a Postman collection or want a `.http` file added for local testing.
