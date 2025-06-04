@@ -1,4 +1,4 @@
-package com.homeworkassignment.Helper;
+package com.homeworkassignment.model;
 public class MonthlyReward {
     private String month;
     private int points;

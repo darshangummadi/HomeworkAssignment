@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.homeworkassignment.Helper.TransactionService;
+import com.homeworkassignment.service.TransactionService;
 
 @SpringBootTest
 class HomeworkAssignmentApplicationTests {

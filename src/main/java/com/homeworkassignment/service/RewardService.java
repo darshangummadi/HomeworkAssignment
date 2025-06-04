@@ -1,7 +1,11 @@
-package com.homeworkassignment.Helper;
+package com.homeworkassignment.service;
 
-public class RewardCalculator {
-    public static int calculatePoints(double amount) {
+import org.springframework.stereotype.Service;
+
+@Service
+public class RewardService {
+
+    public int calculatePoints(double amount) {
         if (amount < 0) {
             throw new IllegalArgumentException("Amount cannot be negative");
         }

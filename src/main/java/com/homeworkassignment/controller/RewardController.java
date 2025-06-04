@@ -1,5 +1,6 @@
-package com.homeworkassignment.Helper;
+package com.homeworkassignment.controller;
 
+import com.homeworkassignment.service.TransactionService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,20 +25,21 @@ public class RewardController {
             @RequestParam(required = false)
             @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate) {
 
-        // we are setting default values for startDate and endDate if not provided
+
         if (startDate == null) startDate = LocalDate.now().minusMonths(3);
         if (endDate == null) endDate = LocalDate.now();
 
-        // Validating the input
+
         if (customerId == null || customerId <= 0) {
             return CompletableFuture.completedFuture(
-                    ResponseEntity.badRequest().body("Invalid customer ID"));
+                    ResponseEntity.status(400).body("Invalid customer ID"));
         }
 
         if (startDate.isAfter(endDate)) {
             return CompletableFuture.completedFuture(
-                    ResponseEntity.badRequest().body("Start date must be before end date"));
+                    ResponseEntity.status(400).body("Start date must be before end date"));
         }
+
 
         return transactionService.getTransactions(customerId, startDate, endDate)
                 .thenApply(trans -> {
@@ -47,6 +49,7 @@ public class RewardController {
                     return ResponseEntity.ok(transactionService.calculateRewards(customerId, trans));
                 })
                 .exceptionally(ex ->
-                        ResponseEntity.internalServerError().body("Error processing request"));
+                        ResponseEntity.status(500).body("Internal server error")
+                );
     }
 }

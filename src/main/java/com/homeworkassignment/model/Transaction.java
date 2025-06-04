@@ -1,22 +1,22 @@
-package com.homeworkassignment.Helper;
+package com.homeworkassignment.model;
 import java.time.LocalDate;
 
 public class Transaction {
-    private Long id;
+    private Long TransactionId;
     private Long customerId;
     private double amount;
     private LocalDate date;
 
     // Constructor
-    public Transaction(Long id, Long customerId, double amount, LocalDate date) {
-        this.id = id;
+    public Transaction(Long transactionId, Long customerId, double amount, LocalDate date) {
+        this.TransactionId = transactionId;
         this.customerId = customerId;
         this.amount = amount;
         this.date = date;
     }
 
     // Getters
-    public Long getId() { return id; }
+    public Long getTransactionId() { return TransactionId; }
     public Long getCustomerId() { return customerId; }
     public double getAmount() { return amount; }
     public LocalDate getDate() { return date; }
