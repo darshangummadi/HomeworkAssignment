@@ -104,3 +104,70 @@ com.homeworkassignment
 ```
 
 ---
+1. Valid Request with Rewards
+
+<img width="1673" alt="image" src="https://github.com/user-attachments/assets/3c704f3c-6984-4f18-87aa-575de053826f" />
+
+```json
+{
+    "customerId": 101,
+    "monthlyRewards": [
+        {
+            "month": "2023-03",
+            "points": 0
+        },
+        {
+            "month": "2023-02",
+            "points": 150
+        },
+        {
+            "month": "2023-01",
+            "points": 120
+        }
+    ],
+    "totalRewards": 270,
+    "transactionDetails": [
+        {
+            "transactionId": 1,
+            "date": "2023-01-05",
+            "amount": 120.0,
+            "rewardPoints": 90
+        },
+        {
+            "transactionId": 2,
+            "date": "2023-01-15",
+            "amount": 80.0,
+            "rewardPoints": 30
+        },
+        {
+            "transactionId": 3,
+            "date": "2023-02-10",
+            "amount": 150.0,
+            "rewardPoints": 150
+        },
+        {
+            "transactionId": 4,
+            "date": "2023-03-12",
+            "amount": 40.0,
+            "rewardPoints": 0
+        }
+    ]
+}
+```
+2. Invalid Customer Id
+<img width="1673" alt="image" src="https://github.com/user-attachments/assets/1a3739c3-e38a-454f-98b5-642ef1159043" />
+
+3. Start date after end date
+
+<img width="1369" alt="image" src="https://github.com/user-attachments/assets/f272c135-c798-421a-8e2c-faa2d968e82d" />
+
+4. No Content for unknown user
+
+<img width="1369" alt="image" src="https://github.com/user-attachments/assets/6334b4d4-a840-4635-af9f-0033591ecbe8" />
+
+5. No Dates (default with 3 months)
+
+<img width="1369" alt="image" src="https://github.com/user-attachments/assets/b27b9c2d-0bb9-4270-a9af-b0bc3054c7d8" />
+
+
+
